@@ -1,5 +1,6 @@
 <%@ page import="es.taw.starwars.entity.FraseCelebre" %>
 <%@ page import="es.taw.starwars.entity.FraseCelebre" %>
+<%@ page import="es.taw.starwars.entity.Pelicula" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: anton
@@ -30,7 +31,10 @@
         <tr>
             <td><%= fraseCelebre.getPersonaje().getNombre()%></td>
             <td><%= fraseCelebre.getFrase()%></td>
-            <td><%= fraseCelebre.getPelicula().getTitulo()%></td>
+            <td>
+                <a href="/editar?id=<%= fraseCelebre.getPelicula().getPeliculaId() %>">
+                    <%= fraseCelebre.getPelicula().getTitulo()%></a>
+            </td>
         </tr>
     <%
         }
